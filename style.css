@@ -1,0 +1,122 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #a9bf7f;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #dddd70;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.logo {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 40%;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loader {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  height: 80px;
+}
+
+.loader:after {
+  text-align: center;
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #64b06c;
+  border-color: #64b06c transparent #64b06c transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.currencyForm {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff879;
+}
+
+.currency-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.currency,
+.amount {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.result {
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+}
+
+
+.checkRateButton,
+.convertToPLN {
+  margin-top: 10px;
+  background-color: #64b06c;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkRateButton:hover {
+  background-color: #218838;
+}
+
+.convertedAmount {
+  text-align: center;
+  margin: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
