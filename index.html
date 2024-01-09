@@ -11,8 +11,9 @@
 <body>
   <div class="container">
     <header class="header">
-      <img src="/assets/currencies.jpg" alt="curr" class="logo"></img>
-      <h1>Przelicz aktualny kurs</h1>
+      <img src="/assets/currencies.jpg" alt="curr" class="logo" />
+      <h1 class="title">Przelicz aktualny kurs</h1>
+      <div id="error-message" class="error-message"></div>
     </header>
     <div id="loader" class="loader"></div>
     <form id="currencyForm" class="currencyForm">
@@ -22,13 +23,10 @@
         <option value="EUR">Euro (EUR)</option>
         <option value="CHF">Frank szwajcarski (CHF)</option>
       </select>
-      <button type="button" id="checkRateButton" class="checkRateButton">
-        Sprawdź kurs
-      </button>
       <div id="result" class="result"></div>
       <label for="amount">Wprowadź kwotę:</label>
       <input type="number" id="amount" class="amount" name="amount" placeholder="Wprowadź kwotę" required />
-      <button type="button" id="convertToPLN" class="convertToPLN">
+      <button type="submit" id="convertToPLN" class="action-button">
         Przelicz na złotówki
       </button>
       <div id="convertedAmount" class="convertedAmount"></div>

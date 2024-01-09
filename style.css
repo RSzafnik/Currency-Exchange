@@ -32,7 +32,7 @@ body {
   border-radius: 40%;
 }
 
-h1 {
+.title {
   text-align: center;
   margin-top: 20px;
 }
@@ -98,8 +98,7 @@ h1 {
 }
 
 
-.checkRateButton,
-.convertToPLN {
+.action-button {
   margin-top: 10px;
   background-color: #64b06c;
   color: #fff;
@@ -110,8 +109,10 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-.checkRateButton:hover {
-  background-color: #218838;
+@media (hover: hover) {
+  .action-button:hover {
+    background-color: #218838;
+  }
 }
 
 .convertedAmount {
