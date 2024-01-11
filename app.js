@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   currencyForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    convertCurrency();
+    convertCurrency(event);
   });
 
   function convertCurrency() {
-    const amount = parseFloat(amountInput.value);
-    const selectedCurrency = currencySelect.value;
+    errorMessageDiv.textContent = "";
+    const amount = parseFloat(event.target.amount.value);
+    const selectedCurrency = event.target.currency.value;
 
     if (isNaN(amount) || amount <= 0) {
       updateErrorMessage("Proszę wprowadzić poprawną kwotę.");
